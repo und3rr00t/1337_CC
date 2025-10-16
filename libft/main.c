@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int	ft_memset();
+ char *ft_strchr(const char *s, int c);
 int main()
 {
-	printf("%d\n", ft_memset());
+	printf("%s\n", (char *)ft_strchr("oudmahd", 97));
 }

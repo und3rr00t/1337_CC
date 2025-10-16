@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oused-da <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 20:59:33 by oused-da          #+#    #+#             */
-/*   Updated: 2025/10/16 21:01:09 by oused-da         ###   ########.fr       */
+/*   Created: 2025/10/16 21:16:16 by oused-da          #+#    #+#             */
+/*   Updated: 2025/10/16 21:23:31 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	*ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	const unsigned char *ss1;
+	const unsigned char *ss2;
+	size_t i;
+
+	ss1 = (const unsigned char *)s1;
+	ss2 = (const unsigned char *)s2;
+	i = 0;
+	while (i < n)
+	{
+		if (ss1[i] == ss2[i])
+			i++;
+		else
+			return (ss1 - ss2);
+	}
+	return (0);
 }
