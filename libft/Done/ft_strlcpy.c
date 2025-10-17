@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 size_t	strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t l = 0;
-	while (src[l])
-		l++;
+	size_t	l;
+
+	l = ft_strlen(src);
 	size_t i = 0;
 	if (size == 0)
 		return (l);
