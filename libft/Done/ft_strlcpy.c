@@ -6,11 +6,11 @@
 /*   By: oused-da <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:15:13 by oused-da          #+#    #+#             */
-/*   Updated: 2025/10/17 15:15:15 by oused-da         ###   ########.fr       */
+/*   Updated: 2025/10/17 16:35:28 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-size_t	strlcpy(char *dst, const char *src, size_t size)
+#include <stddef.h>
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t l = 0;
 	while (src[l])

@@ -1,7 +1,9 @@
 #include <stdio.h>
 
- char ft_mem(int c);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 int main()
 {
-	printf("%d\n", ft_mem(1337));
+	char d[15];
+	printf("%zu\n", ft_strlcpy(d, "012345678901234567890123456789", 20));
+	printf("%s", d);
 }
