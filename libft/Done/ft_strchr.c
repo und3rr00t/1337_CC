@@ -9,7 +9,9 @@
 /*   Updated: 2025/10/16 22:28:57 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
+#include "linft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;

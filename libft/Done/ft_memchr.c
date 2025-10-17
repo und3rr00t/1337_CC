@@ -9,7 +9,7 @@
 /*   Updated: 2025/10/16 22:16:13 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;

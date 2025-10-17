@@ -9,8 +9,9 @@
 /*   Updated: 2025/10/15 11:15:10 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "./Done/ft_isalpha.c"
-#include "./Done/ft_isdigit.c"
+
+#include "libft.h"
+
 int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
