@@ -1,7 +1,7 @@
 #include <stdio.h>
 
- char *ft_strchr(const char *s, int c);
+ char ft_mem(int c);
 int main()
 {
-	printf("%s\n", (char *)ft_strchr("oudmahd", 97));
+	printf("%d\n", ft_mem(1337));
 }

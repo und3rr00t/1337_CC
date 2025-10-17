@@ -17,10 +17,12 @@ char	*ft_strchr(const char *s, int c)
 
 	ss = (char)s;
 	i = 0;
-	while (ss[i])
+	while (1)
 	{
 		if (ss[i] == c)
-			return (&ssp[i]);
+			return (&ss[i]);
+		if (ss[i] == '\0')
+			return (NULL);
 		i++;
 	}
 	return (NULL);
