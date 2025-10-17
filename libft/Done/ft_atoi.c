@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oused-da <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 14:32:03 by oused-da          #+#    #+#             */
-/*   Updated: 2025/10/17 15:58:50 by oused-da         ###   ########.fr       */
+/*   Created: 2025/10/17 15:11:02 by oused-da          #+#    #+#             */
+/*   Updated: 2025/10/17 15:12:02 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	unsigned char	*ss;
-	size_t	i;
+	int	i;
+	int	s;
+	int	o;
 
-	ss = (unsigned char *)s;
 	i = 0;
-	while (i < n)
+	s = 1;
+	o = 0;
+
+	while ((nptr[i] == 32) || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		ss[i] = (unsigned char)c;
+		if (nptr[i] == '-')
+			s *= -1;
 		i++;
 	}
-	return (s);
+	while (ft_isdigit(nptr[i]))
+	{
+		o = o * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (o * s);
 }
