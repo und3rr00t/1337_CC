@@ -12,18 +12,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-void ft_putnbr(long int nb, int *j)
+void	ft_putnbr(long int nb, char *s,  int *i)
 {
 	if (nb < 0)
 	{
+		s[(*i)++] = '-';
 		nb = -nb;
-		**s = '-';
-		(*s)++;
 	}
 	if (nb > 9)
-		ft_putnbr((nb / 10), s);
-	**s = (nb % 10) + 48;
-	(*s)++;
+		ft_putnbr((nb / 10), s, i);
+	s[(*i)++] = (nb % 10) + 48;
 }
 
 
@@ -33,10 +31,9 @@ char	*ft_itoa(int n)
 	int	i;
 	long int	l;
 	long int	nb;
-	int	j;
+	int	tmp;
 
 	nb = n;
-	i = 0;
 	if (n == 0)
 	{
 		s = (char *)malloc(sizeof(char) * 2);
@@ -46,27 +43,20 @@ char	*ft_itoa(int n)
 		s[1] = 0;
 		return (s);
 	}
-	if (n < 0)
+	tmp = nb;
+	if (tmp < 0)
+		tmp = -tmp;
+	l = 0;
+	while (tmp)
 	{
-		nb = -nb;
-		i++;
+		tmp = tmp / 10;
+		l++;
 	}
-	l = nb;
-	while (l)
-	{
-		l = l / 10;
-		i++;
-	}
-	s = (char *)malloc(sizeof(char) * (i + 1));
+	s = (char *)malloc(sizeof(char) * (l + 1));
 	if (!s)
 		return (NULL);
-	if (n < 0)
-		nb = -nb;
-	ft_putnbr(nb, s);
+	i = 0;
+	ft_putnbr(nb, s, &i);
+	s[i] = 0;
 	return (s);
 }
-int main()
-{
-	printf("%s\n", ft_itoa(1000));
-}
-	
