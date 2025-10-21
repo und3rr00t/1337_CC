@@ -38,3 +38,11 @@ int	ft_toupper(int c);
 int	ft_atoi(const char *nptr);
 
 # endif
+
+/*BONUS*/
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+}
