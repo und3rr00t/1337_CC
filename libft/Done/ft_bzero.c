@@ -6,17 +6,16 @@
 /*   By: oused-da <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:04:38 by oused-da          #+#    #+#             */
-/*   Updated: 2025/10/16 21:11:50 by oused-da         ###   ########.fr       */
+/*   Updated: 2025/10/22 20:20:10 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*str;
-	
-	str = (unsigned char *)s;
-	size_t	i;
+	size_t			i;
 
+	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
