@@ -6,11 +6,11 @@
 /*   By: oused-da <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:00:41 by oused-da          #+#    #+#             */
-/*   Updated: 2025/10/22 16:56:28 by oused-da         ###   ########.fr       */
+/*   Updated: 2025/10/22 16:57:49 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*include "libft.h"*/
+include "libft.h"
 
 int	ft_substr(char *s, char c)
 {
