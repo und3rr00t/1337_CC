@@ -6,9 +6,11 @@
 /*   By: oused-da <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 19:02:44 by oused-da          #+#    #+#             */
-/*   Updated: 2025/10/21 19:02:46 by oused-da         ###   ########.fr       */
+/*   Updated: 2025/10/23 14:09:18 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -16,7 +18,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	i = 0;
 	if (!s || !f)
-		return;
+		return ;
 	while (s[i])
 	{
 		f(i, &s[i]);

@@ -6,7 +6,7 @@
 /*   By: oused-da <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 22:16:31 by oused-da          #+#    #+#             */
-/*   Updated: 2025/10/16 22:28:57 by oused-da         ###   ########.fr       */
+/*   Updated: 2025/10/23 14:15:06 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
 	char	*ss;
 
 	ss = (char)s;

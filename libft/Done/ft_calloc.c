@@ -6,7 +6,7 @@
 /*   By: oused-da <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 19:52:11 by oused-da          #+#    #+#             */
-/*   Updated: 2025/10/19 21:24:13 by oused-da         ###   ########.fr       */
+/*   Updated: 2025/10/23 13:32:52 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	{
 		s = (void *)malloc(1);
 		if (!s)
-			return(NULL);
+			return (NULL);
 		return (s);
+	}
 	s = (void *)malloc(i);
 	if (!s)
 		return (NULL);

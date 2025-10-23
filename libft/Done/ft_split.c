@@ -6,7 +6,7 @@
 /*   By: oused-da <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:00:41 by oused-da          #+#    #+#             */
-/*   Updated: 2025/10/22 16:57:49 by oused-da         ###   ########.fr       */
+/*   Updated: 2025/10/23 13:58:02 by oused-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	ft_strs(char *s, char c)
 	}
 	return (sub);
 }
+
 char	*get_word(const char *s, char c)
 {
 	char	*word;
@@ -59,7 +60,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		i;
-	       
+
 	i = 0;
 	if (!s)
 		return (NULL);
