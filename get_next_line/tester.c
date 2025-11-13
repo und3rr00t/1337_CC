@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include "get_next_line.h" // Make sure this is in the same directory
+#include "get_next_line.h"
 
 // ------------------ Utilities ------------------
 
