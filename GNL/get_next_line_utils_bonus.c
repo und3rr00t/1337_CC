@@ -1,4 +1,4 @@
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -41,9 +41,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		s1 = malloc(1);
 		s1[0] = 0;
 	}
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	joined = malloc(s1_len + s2_len + 1);
+	joined = malloc(ft_strlen(s1) + ft_strlen(s2)+ 1);
 	if (!joined)
 		return (free(s1), NULL);
 	i = 0;
@@ -53,6 +51,5 @@ char	*ft_strjoin(char *s1, char *s2)
 	while (s2[j])
 		joined[i++] = s2[j++];
 	joined[i] = 0;
-	free(s1);
-	return (joined);
+	return (free(s1), joined);
 }
