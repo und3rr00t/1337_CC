@@ -43,14 +43,14 @@ char	*ft_strchr(const char *s, int c)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*joined;
-	size_t	s1_len;
-	size_t	s2_len;
 	int		i;
 	int		j;
 
 	if (!s1)
 	{
 		s1 = malloc(1);
+		if (!s1)
+			return (NULL);
 		s1[0] = 0;
 	}
 	joined = malloc(ft_strlen(s2) + ft_strlen(s1) + 1);
