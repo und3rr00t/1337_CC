@@ -31,8 +31,7 @@ char	*read_file(int fd, char *stash)
 		buffer[read_bytes] = '\0';
 		stash = ft_strjoin(stash, buffer);
 	}
-	free(buffer);
-	return (stash);
+	return (free(buffer), stash);
 }
 
 char	*ft_line(char *stash)
@@ -82,8 +81,7 @@ char	*ft_new_stash(char *stash)
 	while (stash[i])
 		new_stash[j++] = stash[i++];
 	new_stash[j] = '\0';
-	free(stash);
-	return (new_stash);
+	return (free(stash), new_stash);
 }
 
 char	*get_next_line(int fd)
