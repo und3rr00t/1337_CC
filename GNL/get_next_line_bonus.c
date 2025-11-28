@@ -25,11 +25,7 @@ char	*read_file(int fd, char *stash)
 	{
 		read_bytes = read(fd, buffer, BUFFER_SIZE);
 		if (read_bytes == -1)
-		{
-			free(buffer);
-			free(stash);
-			return (NULL);
-		}
+			return (free(buffer), NULL);
 		if (read_bytes == 0)
 			return (free(buffer), stash);
 		buffer[read_bytes] = '\0';
