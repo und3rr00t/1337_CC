@@ -58,7 +58,10 @@ char	*ft_strjoin(char *s1, char *s2)
 		return (free(s1), NULL);
 	i = 0;
 	while (s1[i])
-		joined[i] = s1[i++];
+	{
+		joined[i] = s1[i];
+		i++;
+	}
 	j = 0;
 	while (s2[j])
 		joined[i++] = s2[j++];
